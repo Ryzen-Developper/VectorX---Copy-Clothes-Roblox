@@ -60,7 +60,7 @@ A extensão foi projetada para se integrar perfeitamente ao visual do Roblox, ga
 ---
 
 ## 📩 Contato
-Caso tenha dúvidas, sugestões ou encontre algum bug, entre em contato através do [GitHub](https://github.com/seu-repositorio) ou envie um email para **suporte@vectorx.com**.
+Caso tenha dúvidas, sugestões ou encontre algum bug, entre em contato através do [GitHub](https://github.com/Ryzen-Developper) ou envie um email para **supp0rt.vectorx@gmail.com**.
 
 ---
 
