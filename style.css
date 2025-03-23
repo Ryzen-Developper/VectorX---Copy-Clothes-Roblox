@@ -1,188 +1,99 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("VectorX - Copy Clothes V2 iniciado!");
 
-body {
-    font-family: 'Arial', sans-serif;
-    color: #4b4141;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    // Corrigindo o botão de download para abrir o link corretamente
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+        window.location.href = "https://github.com/Ryzen-Developper/VectorX---Copy-Clothes-Roblox/raw/refs/heads/main/VectorX.rar";
+    });
 
-/* Estilos para o fundo de partículas */
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    z-index: 1;
-    text-align: center;
-}
-
-/* Título e descrição */
-.header h1 {
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.header p {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-bottom: 30px;
-}
-
-/* Card centralizado */
-.card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card h2 {
-    color: #333;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.button {
-    background-color: #000000;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-}
-
-.button:hover {
-    background-color: #fd5608;
-    transform: scale(1.05);
-}
-
-/* Seção de Vídeo Tutorial */
-.tutorial-video {
-    margin-top: 40px;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.tutorial-video h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.tutorial-video p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Estilizando o vídeo */
-.video-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.video-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Rodapé */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    font-size: 1.5rem;
-    color: #fff;
-    background-color: #fcf8f8;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Alinhando "Criado por" à direita */
-footer .created-by {
-    margin-left: auto;
-    font-size: 1.2rem;
-}
-
-/* Estilizando o link do crédito */
-footer a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.6rem;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #4b0bb3;
-    text-decoration: underline;
-}
-
-/* Animação do vídeo */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+    // Verificando se Particles.js está carregado antes de inicializar
+    if (typeof particlesJS !== "undefined") {
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#4CAF50"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#ffffff"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#4CAF50",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    } else {
+        console.error("Erro: Particles.js não carregado.");
     }
-    100% {
-        opacity: 1;
-    }
-}
-
-.tutorial-video {
-    animation: fadeIn 1s ease-in-out;
-}
+});
